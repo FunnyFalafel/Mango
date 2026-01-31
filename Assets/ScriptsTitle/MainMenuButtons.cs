@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuButtons : MonoBehaviour
 {
     public void Play() {
-        SceneManager.LoadScene("GameplayScene");
+        LevelManager.Instance.LoadScene("GameplayScene", "CrossFade");
     }
 
     public void Quit() {
