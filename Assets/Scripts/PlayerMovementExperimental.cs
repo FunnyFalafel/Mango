@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class PlayerMovementExperimental : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer sr;
     public float playerSpeed = 10f;
     public float jumpPower = 10f;
     public float worldOffset = 100f;
     public Rigidbody2D rbody;
+    [SerializeField] private Animator anim;
+
     public float dashLen = 2f;
     public float dashDuration = .15f;
     public float dashCD = 1.5f;
@@ -24,20 +27,36 @@ public class PlayerMovementExperimental : MonoBehaviour
     private bool midDash = false;
     private Vector2 storedVelocity;
     private Vector3 dashDir;
+    float lastDir = 1f; // 1 = right, -1 = left
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         rbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         lastJump = Time.fixedTime;
         lastWarp = Time.fixedTime;
         checkpoint = transform.position;
         lastDash = Time.fixedTime;
         dashSpeed = dashLen / dashDuration;
+        
+
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {      
+        bool groundedNow = CheckGround(false); // !!!false so it doesn't buffer jumps
+        Vector2 v = rbody.linearVelocity;      // if linearVelocity gives issues, use rbody.velocity
+
+        float h = Input.GetAxisRaw("Horizontal");  
+
+        anim.SetFloat("YVel", v.y);
+        anim.SetBool("Grounded", groundedNow);
+        anim.SetFloat("Speed", groundedNow ? Mathf.Abs(h) : 0f);
+
+
         //Debug.Log(FindObjectsOfType<Collider2D>().Length);
         //Dash stuff
         if (midDash)
@@ -56,8 +75,24 @@ public class PlayerMovementExperimental : MonoBehaviour
             }
         }
 
+        if (h > 0.01f)
+        {
+            sr.flipX = true; // facing right
+            lastDir = -1f;
+        }
+        else if (h < -0.01f)
+        {
+            sr.flipX = false;  // facing left
+            lastDir = 1f;
+        }
+        // else: do nothing -> keeps last direction while idle
 
-        rbody.linearVelocityX = Input.GetAxis("Horizontal")*playerSpeed;
+
+        //rbody.linearVelocityX = h*playerSpeed;
+
+        v.x = h*playerSpeed;
+        rbody.linearVelocity = v;
+
         if((Input.GetKeyDown("space") && CheckGround(true) && Time.fixedTime-lastJump>0.03f) || (bufferedJump && CheckGround(false) && Time.fixedTime - lastJump > 0.03f))
         {
             //Debug.Log("Jump!");
@@ -107,13 +142,14 @@ public class PlayerMovementExperimental : MonoBehaviour
             if (inFuture) dashDir += Vector3.right * worldOffset;
             dashDir = dashDir/dashDir.magnitude;
         }
-
     }
 
 
     bool CheckGround(bool manual)
     {
         float bonusOffset = 0.05f;
+        Debug.DrawRay(transform.position + new Vector3(-0.30f - bonusOffset, -0.61f, 0f), Vector2.down * 0.6f, Color.red);
+        Debug.DrawRay(transform.position + new Vector3( 0.30f + bonusOffset, -0.61f, 0f), Vector2.down * 0.6f, Color.red);
 
         RaycastHit2D lOffsetCheck = Physics2D.Raycast(transform.position + new Vector3(-0.35f, -0.3f, 0f), Vector2.down);
         RaycastHit2D rOffsetCheck = Physics2D.Raycast(transform.position + new Vector3(0.35f, -0.3f, 0f), Vector2.down);
