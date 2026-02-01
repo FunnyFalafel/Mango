@@ -87177,12 +87177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea44cc2b5030f02468466bae7484fdcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementExperimental
-  sr: {fileID: 0}
+  sr: {fileID: 1806994720}
   playerSpeed: 5
-  jumpPower: 7
+  jumpPower: 8
   worldOffset: 60
-  rbody: {fileID: 0}
-  anim: {fileID: 0}
+  rbody: {fileID: 1806994706}
+  anim: {fileID: 1806994718}
   dashLen: 1.2
   dashDuration: 0.2
   dashCD: 1.5
@@ -87247,6 +87247,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &1806994720 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3123984690598634012, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
+  m_PrefabInstance: {fileID: 261373251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1853763012
 GameObject:
   m_ObjectHideFlags: 0
