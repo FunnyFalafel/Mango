@@ -38,7 +38,7 @@ public class PlayerMovementExperimental : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //Debug.Log(FindObjectsOfType<Collider2D>().Length);
         //Dash stuff
         if (midDash)
         {
@@ -204,4 +204,6 @@ public class PlayerMovementExperimental : MonoBehaviour
         shadowPos = new Vector3();
         dashEnabled = false;
     }
+
+    
 }

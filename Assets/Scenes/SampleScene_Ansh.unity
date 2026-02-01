@@ -6360,7 +6360,7 @@ TilemapCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
+  m_MaximumTileChangeCount: 100
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
 --- !u!66 &198040252
@@ -6398,8 +6398,8 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
+  m_GeometryType: 1
+  m_GenerationType: 1
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
@@ -7002,6 +7002,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3521598338635285597, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1806994709}
+    - targetCorrespondingSourceObject: {fileID: 3521598338635285597, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1806994712}
   m_SourcePrefab: {fileID: 100100000, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
 --- !u!1 &442575096
 GameObject:
@@ -7962,14 +7965,12 @@ MonoBehaviour:
     Style: 1
     Time: 2
     CustomCurve:
+      serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
-  m_OutputCamera: {fileID: 519420031}
-  m_TargetOverride: {fileID: 0}
-  m_LastFrameUpdated: 581
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -8070,7 +8071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &709894540
 Grid:
   m_ObjectHideFlags: 0
@@ -25662,7 +25663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &950491886
 Grid:
   m_ObjectHideFlags: 0
@@ -31976,8 +31977,8 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
+  m_GeometryType: 1
+  m_GenerationType: 1
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
@@ -39821,8 +39822,8 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
+  m_GeometryType: 1
+  m_GenerationType: 1
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
@@ -45447,8 +45448,8 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
+  m_GeometryType: 1
+  m_GenerationType: 1
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
@@ -45484,6 +45485,67 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &1147221499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.17176
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.10001
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292231522537832608, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337953607944007991, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1806994703}
+    - target: {fileID: 5675703280709504700, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
+      propertyPath: m_Name
+      value: MouseTracker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bf88e574a8107e44806058a8fff5d8b, type: 3}
 --- !u!1 &1207370650
 GameObject:
   m_ObjectHideFlags: 0
@@ -49972,8 +50034,8 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
+  m_GeometryType: 1
+  m_GenerationType: 1
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
@@ -58824,7 +58886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1326335252
 Grid:
   m_ObjectHideFlags: 0
@@ -64482,8 +64544,8 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
+  m_GeometryType: 1
+  m_GenerationType: 1
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
@@ -74720,7 +74782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1722387885
 Grid:
   m_ObjectHideFlags: 0
@@ -83572,7 +83634,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806994703}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef68a9e33a554a14a8e6334122c682fa, type: 3}
   m_Name: 
@@ -83580,6 +83642,25 @@ MonoBehaviour:
   playerSpeed: 5
   jumpPower: 5
   rbody: {fileID: 1806994706}
+--- !u!114 &1806994712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806994703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea44cc2b5030f02468466bae7484fdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementExperimental
+  playerSpeed: 5
+  jumpPower: 5
+  worldOffset: 60
+  rbody: {fileID: 0}
+  dashLen: 2
+  dashDuration: 0.15
+  dashCD: 1.5
 --- !u!1 &1853763012
 GameObject:
   m_ObjectHideFlags: 0
@@ -83596,7 +83677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1853763013
 Grid:
   m_ObjectHideFlags: 0
@@ -83660,16 +83741,13 @@ MonoBehaviour:
     Enabled: 1
     m_Value: 10
   OutputChannel: 1
-  ActivationId: 3
-  m_QueuePriority: 10
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
-  <Extensions>k__BackingField: []
-  <PreviousStateIsValid>k__BackingField: 1
-  <FollowTargetChanged>k__BackingField: 0
-  <LookAtTargetChanged>k__BackingField: 0
-  Target: {TrackingTarget: {fileID: 1806994708}, LookAtTarget: {fileID: 0}, CustomLookAtTarget: 0}
+  Target:
+    TrackingTarget: {fileID: 1806994708}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
     OrthographicSize: 4.5764036
@@ -83689,12 +83767,7 @@ MonoBehaviour:
       Curvature: {x: 2, y: 11}
       BarrelClipping: 0.25
       Anamorphism: 0
-    m_OrthoFromCamera: 1
-    m_PhysicalFromCamera: 0
-    m_AspectFromCamera: 1.640112
-    m_SourceCamera: {fileID: 519420031}
   BlendHint: 0
-  m_Pipeline: []
 --- !u!4 &1996925827
 Transform:
   m_ObjectHideFlags: 0
@@ -83722,7 +83795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePositionComposer
-  m_VcamOwner: {fileID: 1996925826}
   CameraDistance: 10
   DeadZoneDepth: 0
   Composition:
@@ -83742,20 +83814,6 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
-  m_PreviousCameraPosition: {x: -7.5, y: 0.5, z: -10}
-  m_PreviousRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_PreviousComposition:
-    ScreenPosition: {x: 0, y: 0}
-    DeadZone:
-      Enabled: 0
-      Size: {x: 0.2, y: 0.2}
-    HardLimits:
-      Enabled: 0
-      Size: {x: 0.8, y: 0.8}
-      Offset: {x: 0, y: 0}
-  m_PreviousDesiredDistance: 10
-  m_InheritingPosition: 0
-  <TrackedPoint>k__BackingField: {x: -7.5, y: 0.5, z: 0}
 --- !u!1 &2036552546
 GameObject:
   m_ObjectHideFlags: 0
@@ -101893,6 +101951,7 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1011722337}
   - {fileID: 261373251}
+  - {fileID: 1147221499}
   - {fileID: 834137704}
   - {fileID: 1549536802}
   - {fileID: 709894541}
