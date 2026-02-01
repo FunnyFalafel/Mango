@@ -6964,7 +6964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6896687313935701952, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -35
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 6896687313935701952, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7012,6 +7012,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3521598338635285597, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1806994715}
+    - targetCorrespondingSourceObject: {fileID: 3521598338635285597, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1806994718}
   m_SourcePrefab: {fileID: 100100000, guid: f71cceff157bfb24896ce87ea906a987, type: 3}
 --- !u!1 &442575096
 GameObject:
@@ -7940,7 +7943,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -35, z: -10}
+  m_LocalPosition: {x: -7.5, y: -27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74879,7 +74882,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 16f14d0a06c760743b96d157645c16fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83706,6 +83709,28 @@ CapsuleCollider2D:
   m_Offset: {x: -0.03, y: 0}
   m_Size: {x: 0.36, y: 0.84}
   m_Direction: 0
+--- !u!95 &1806994718
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806994703}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5871daf4444ffae40a5aa7e9049bc1b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1853763012
 GameObject:
   m_ObjectHideFlags: 0
@@ -83822,7 +83847,7 @@ Transform:
   m_GameObject: {fileID: 1996925825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -35, z: -10}
+  m_LocalPosition: {x: -7.5, y: -27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
