@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
     public Transform character;
     public float moveSpeed = 5f;
     public float moveDistance = 8f;
+    public AudioSource menuMusic;
+    public AudioSource footstepLoop;
 
     private void Awake()
     {
@@ -36,6 +38,9 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator LoadSceneAsync(string sceneName, string transitionName)
     {
+        if (menuMusic != null) menuMusic.Stop();
+        if (footstepLoop != null && !footstepLoop.isPlaying) footstepLoop.Play();
+
         SceneTransition transition = transitions.FirstOrDefault(t => t.name == transitionName);
 
         AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(sceneName);
@@ -44,7 +49,8 @@ public class LevelManager : MonoBehaviour
         if (character != null)
         {
             Animator anim = character.GetComponent<Animator>();
-            if (anim != null) anim.SetBool("isWalk", true);
+            if (anim != null) anim.SetBool("Grounded", true);
+
             float moved = 0f;
             while (moved < moveDistance)
             {
@@ -55,17 +61,17 @@ public class LevelManager : MonoBehaviour
             }
 
             character.gameObject.SetActive(false);
-
         }
 
         if (transition != null)
             yield return transition.AnimateTransitionIn();
 
+        if (footstepLoop != null) footstepLoop.Stop();
         sceneLoad.allowSceneActivation = true;
         yield return new WaitUntil(() => sceneLoad.isDone);
-
         if (transition != null)
             yield return transition.AnimateTransitionOut();
     }
+
 
 }
