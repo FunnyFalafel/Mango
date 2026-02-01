@@ -9,6 +9,7 @@ public class PlayerMovementExperimental : MonoBehaviour
     public float dashLen = 2f;
     public float dashDuration = .15f;
     public float dashCD = 1.5f;
+    public GameObject cinemachineCamera;
 
     private bool jumping = false;
     private float lastJump;
@@ -24,6 +25,8 @@ public class PlayerMovementExperimental : MonoBehaviour
     private bool midDash = false;
     private Vector2 storedVelocity;
     private Vector3 dashDir;
+    private bool bufferCam = false;
+    private float camBufferTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,12 +36,20 @@ public class PlayerMovementExperimental : MonoBehaviour
         checkpoint = transform.position;
         lastDash = Time.fixedTime;
         dashSpeed = dashLen / dashDuration;
+        camBufferTime = Time.fixedTime;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Debug.Log(FindObjectsOfType<Collider2D>().Length);
+
+        //Cam jank
+        if (bufferCam && Time.fixedTime-camBufferTime>.025f)
+        {
+            cinemachineCamera.SetActive(true);
+        }
+
         //Dash stuff
         if (midDash)
         {
@@ -113,10 +124,10 @@ public class PlayerMovementExperimental : MonoBehaviour
 
     bool CheckGround(bool manual)
     {
-        float bonusOffset = 0.05f;
+        float bonusOffset = 0.02f;
 
-        RaycastHit2D lOffsetCheck = Physics2D.Raycast(transform.position + new Vector3(-0.35f, -0.3f, 0f), Vector2.down);
-        RaycastHit2D rOffsetCheck = Physics2D.Raycast(transform.position + new Vector3(0.35f, -0.3f, 0f), Vector2.down);
+        RaycastHit2D lOffsetCheck = Physics2D.Raycast(transform.position + new Vector3(-0.19f, -0.3f, 0f), Vector2.down);
+        RaycastHit2D rOffsetCheck = Physics2D.Raycast(transform.position + new Vector3(0.19f, -0.3f, 0f), Vector2.down);
         try
         {
             if (lOffsetCheck.collider.gameObject.tag == "ground" && lOffsetCheck.distance < 0.1f)
@@ -132,12 +143,12 @@ public class PlayerMovementExperimental : MonoBehaviour
         catch { }
 
 
-        RaycastHit2D leftCheck = Physics2D.Raycast(transform.position + new Vector3(-0.30f - bonusOffset, -0.61f, 0f), Vector2.down);
-        RaycastHit2D rightCheck = Physics2D.Raycast(transform.position + new Vector3(0.30f + bonusOffset, -0.61f, 0f), Vector2.down);
+        RaycastHit2D leftCheck = Physics2D.Raycast(transform.position + new Vector3(-0.18f - bonusOffset, -0.37f, 0f), Vector2.down);
+        RaycastHit2D rightCheck = Physics2D.Raycast(transform.position + new Vector3(0.12f + bonusOffset, -0.37f, 0f), Vector2.down);
         try
         {
-            if (leftCheck.collider.gameObject.tag == "ground" && leftCheck.distance < 0.1f) return true;
-            else if (leftCheck.collider.gameObject.tag == "ground" && leftCheck.distance < 0.4f && manual)
+            if (leftCheck.collider.gameObject.tag == "ground" && leftCheck.distance < 0.2f) return true;
+            else if (leftCheck.collider.gameObject.tag == "ground" && leftCheck.distance < 0.45f && manual)
             {
                 //Debug.Log("jump buffered.");
                 bufferedJump = true;
@@ -146,8 +157,8 @@ public class PlayerMovementExperimental : MonoBehaviour
         } catch { }
         try
         {
-            if (rightCheck.collider.gameObject.tag == "ground" && rightCheck.distance < 0.1f) return true;
-            else if (rightCheck.collider.gameObject.tag == "ground" && rightCheck.distance < 0.4f && manual)
+            if (rightCheck.collider.gameObject.tag == "ground" && rightCheck.distance < 0.2f) return true;
+            else if (rightCheck.collider.gameObject.tag == "ground" && rightCheck.distance < 0.45f && manual)
             {
                 //Debug.Log("jump buffered.");
                 bufferedJump = true;
@@ -164,13 +175,19 @@ public class PlayerMovementExperimental : MonoBehaviour
     {
         Debug.Log("Shifted worlds.");
         lastWarp = Time.fixedTime;
-        if(inFuture) { 
-            transform.position -= new Vector3(worldOffset, 0f, 0f); 
+        if(inFuture) {
+            cinemachineCamera.SetActive(false);
+            transform.position -= new Vector3(worldOffset, 0f, 0f);
+            bufferCam = true;
+            camBufferTime=Time.fixedTime;
             inFuture = false;
         }
         else
         {
+            cinemachineCamera.SetActive(false);
             transform.position += new Vector3(worldOffset, 0f, 0f);
+            bufferCam = true;
+            camBufferTime = Time.fixedTime;
             inFuture = true;
         }
     }
