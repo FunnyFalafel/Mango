@@ -1,11 +1,8 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ChestKey : MonoBehaviour
 {
-    [SerializeField] private GameObject keyFlyPrefab;  // prefab with KeyFlyToUI
-    [SerializeField] private Image keyIcon;            // KeyIcon in UI
-
+    [SerializeField] private GameObject keyFlyPrefab;
     private bool opened;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,15 +14,29 @@ public class ChestKey : MonoBehaviour
 
         opened = true;
 
-        // spawn fly key
+        if (keyFlyPrefab == null)
+        {
+            Debug.LogError("ChestKey: keyFlyPrefab not assigned.");
+            return;
+        }
+
         var cam = Camera.main;
-        GameObject k = Instantiate(keyFlyPrefab, transform.position, Quaternion.identity);
-        k.GetComponent<KeyFlyToUI>().Play(inv, keyIcon, cam);
+        var k = Instantiate(keyFlyPrefab, transform.position, Quaternion.identity);
 
-        // optional: disable chest collider so it can't be re-opened
-        GetComponent<Collider2D>().enabled = false;
+        var fly = k.GetComponent<KeyFlyToUI>();
+        if (fly == null)
+        {
+            Debug.LogError("ChestKey: keyFlyPrefab is missing KeyFlyToUI.");
+            Destroy(k);
+            return;
+        }
 
-        // optional: change sprite to "open chest" here
+        fly.Play(inv, inv.KeyIcon, cam);
+
+        Destroy(gameObject); // ok since you want it to disappear
     }
 }
+
+
+
 

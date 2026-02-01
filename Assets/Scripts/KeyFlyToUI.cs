@@ -7,20 +7,38 @@ public class KeyFlyToUI : MonoBehaviour
     [SerializeField] private float duration = 0.35f;
     [SerializeField] private float popUp = 0.6f;
 
-    public void Play(PlayerInventory inv, Image targetIcon, Camera cam)
+    private PlayerInventory inv;
+    private Image targetIcon;
+    private Camera cam;
+
+    public void Play(PlayerInventory inventory, Image uiIcon, Camera camera)
     {
-        StartCoroutine(Fly(inv, targetIcon, cam));
+        inv = inventory;
+        targetIcon = uiIcon;
+        cam = camera;
+
+        if (inv == null || targetIcon == null || cam == null)
+        {
+            Debug.LogError("KeyFlyToUI missing refs");
+            Destroy(gameObject);
+            return;
+        }
+
+        StartCoroutine(Fly());
     }
 
-    private IEnumerator Fly(PlayerInventory inv, Image targetIcon, Camera cam)
+    private IEnumerator Fly()
     {
         Vector3 start = transform.position;
         Vector3 mid = start + Vector3.up * popUp;
 
-        // convert UI icon position to world position (works for Screen Space Overlay)
-        Vector3 targetScreen = RectTransformUtility.WorldToScreenPoint(null, targetIcon.rectTransform.position);
-        Vector3 targetWorld = cam.ScreenToWorldPoint(new Vector3(targetScreen.x, targetScreen.y, cam.nearClipPlane + 1f));
-        targetWorld.z = start.z;
+        // UI icon screen position (Overlay safe)
+        Vector2 iconScreenPos = RectTransformUtility.WorldToScreenPoint(cam, targetIcon.rectTransform.position);
+
+        // Convert screen -> world at the same Z depth as the key
+        float z = cam.WorldToScreenPoint(start).z;
+        Vector3 target = cam.ScreenToWorldPoint(new Vector3(iconScreenPos.x, iconScreenPos.y, z));
+        target.z = start.z;
 
         float t = 0f;
         while (t < 1f)
@@ -29,18 +47,16 @@ public class KeyFlyToUI : MonoBehaviour
 
             // pop up then curve to target
             Vector3 a = Vector3.Lerp(start, mid, Mathf.SmoothStep(0, 1, Mathf.Clamp01(t * 1.3f)));
-            Vector3 b = Vector3.Lerp(mid, targetWorld, Mathf.SmoothStep(0, 1, t));
+            Vector3 b = Vector3.Lerp(mid, target, Mathf.SmoothStep(0, 1, t));
             transform.position = Vector3.Lerp(a, b, t);
-
-            float s = Mathf.Lerp(1f, 0.6f, t);
-            transform.localScale = new Vector3(s, s, 1f);
 
             yield return null;
         }
 
-        // once it reaches UI, actually give key
         inv.GiveKey();
+        Debug.Log("Key reached UI, giving key");
         Destroy(gameObject);
     }
 }
+
 

@@ -3,22 +3,20 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField] private Image keyIcon; // drag KeyIcon here
+    [SerializeField] private Image keyIcon;
     private bool hasKey;
 
-    private void Awake()
-    {
-        RefreshUI();
-    }
+    public Image KeyIcon => keyIcon;
 
-    public bool HasKey() => hasKey;
+    private void Awake() => RefreshUI();
 
     public void GiveKey()
     {
         hasKey = true;
         RefreshUI();
     }
-
+    
+    
     public bool ConsumeKey()
     {
         if (!hasKey) return false;
@@ -29,10 +27,13 @@ public class PlayerInventory : MonoBehaviour
 
     private void RefreshUI()
     {
-        if (keyIcon == null) return;
-        // either show/hide:
-        keyIcon.gameObject.SetActive(hasKey);
-        // OR if you prefer alpha:
-        // var c = keyIcon.color; c.a = hasKey ? 1f : 0f; keyIcon.color = c;
+        Debug.Log("Has key: " + hasKey);
+    if (keyIcon)
+    {
+        keyIcon.gameObject.SetActive(true); // FORCE SHOW
+        keyIcon.color = Color.white;
+    }
+
     }
 }
+
