@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerMovementexperimental : MonoBehaviour
 {
-    public float playerSpeed = 10f;
-    public float jumpPower = 10f;
+    public float playerSpeed = 6f;
+    public float jumpPower = 5f;
     public Rigidbody2D rbody;
 
     float moveInput;
