@@ -83575,8 +83575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef68a9e33a554a14a8e6334122c682fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementexperimental
-  playerSpeed: 10
-  jumpPower: 10
+  playerSpeed: 5
+  jumpPower: 5
   rbody: {fileID: 1806994706}
 --- !u!1 &1853763012
 GameObject:
