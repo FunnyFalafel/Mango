@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: bbcd425bcff947c4b9599de14c7fe54d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3881886886869633656
+    second: decorationsAndTextPanels_0
+  - first:
+      213: 7067004539735221896
+    second: decorationsAndTextPanels_1
+  - first:
+      213: -7631305522738156988
+    second: decorationsAndTextPanels_2
+  - first:
+      213: 4878526421682602063
+    second: decorationsAndTextPanels_3
+  - first:
+      213: 3517375175464822543
+    second: decorationsAndTextPanels_4
+  - first:
+      213: 2752206969940590981
+    second: decorationsAndTextPanels_5
+  - first:
+      213: 3472570642195085168
+    second: decorationsAndTextPanels_6
+  - first:
+      213: -7312178015271160536
+    second: decorationsAndTextPanels_7
+  - first:
+      213: 3737857150062652731
+    second: decorationsAndTextPanels_8
+  - first:
+      213: -886448270762076241
+    second: decorationsAndTextPanels_9
+  - first:
+      213: -3452794917960362526
+    second: decorationsAndTextPanels_10
+  - first:
+      213: 3618823540040436445
+    second: decorationsAndTextPanels_11
+  - first:
+      213: 3247397989740479991
+    second: decorationsAndTextPanels_12
+  - first:
+      213: 917971567087207654
+    second: decorationsAndTextPanels_13
+  - first:
+      213: -2406957492201194113
+    second: decorationsAndTextPanels_14
+  - first:
+      213: 5210237398481275587
+    second: decorationsAndTextPanels_15
+  - first:
+      213: 1305102389299323431
+    second: decorationsAndTextPanels_16
+  - first:
+      213: 8792757948900744721
+    second: decorationsAndTextPanels_17
+  - first:
+      213: -907460558679893860
+    second: decorationsAndTextPanels_18
+  - first:
+      213: -113420096408333927
+    second: decorationsAndTextPanels_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 85
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a8c167e8b3fd530800000000000000
+      internalID: 3881886886869633656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 85
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886adf0bf2b031260800000000000000
+      internalID: 7067004539735221896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 91
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a27b83f08281690800000000000000
+      internalID: -7631305522738156988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 85
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40cfb7dee104b340800000000000000
+      internalID: 4878526421682602063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 104
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07ab53161a30d030800000000000000
+      internalID: 3517375175464822543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 104
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581c9a748adc13620800000000000000
+      internalID: 2752206969940590981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 104
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077fc71c99c013030800000000000000
+      internalID: 3472570642195085168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_7
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 103
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 825775136dce58a90800000000000000
+      internalID: -7312178015271160536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_8
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 88
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d63a226498fd330800000000000000
+      internalID: 3737857150062652731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_9
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 88
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa7977d8ef3b2b3f0800000000000000
+      internalID: -886448270762076241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_10
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 52
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5d2b8d0553510d0800000000000000
+      internalID: -3452794917960362526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 52
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda8ee816d4a83230800000000000000
+      internalID: 3618823540040436445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_12
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 52
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f58cc62443111d20800000000000000
+      internalID: 3247397989740479991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 31
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e44422d64a4dbc00800000000000000
+      internalID: 917971567087207654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_14
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 30
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7df1e7d9e4c89ed0800000000000000
+      internalID: -2406957492201194113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_15
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 30
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ca8ee31f4b7e4840800000000000000
+      internalID: 5210237398481275587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 8
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72223b555b7ac1210800000000000000
+      internalID: 1305102389299323431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 8
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e983cb4c6260a70800000000000000
+      internalID: 8792757948900744721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_18
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 7
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9815380e6d0863f0800000000000000
+      internalID: -907460558679893860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decorationsAndTextPanels_19
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 9
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991d033f50d0d6ef0800000000000000
+      internalID: -113420096408333927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      decorationsAndTextPanels_0: 3881886886869633656
+      decorationsAndTextPanels_1: 7067004539735221896
+      decorationsAndTextPanels_10: -3452794917960362526
+      decorationsAndTextPanels_11: 3618823540040436445
+      decorationsAndTextPanels_12: 3247397989740479991
+      decorationsAndTextPanels_13: 917971567087207654
+      decorationsAndTextPanels_14: -2406957492201194113
+      decorationsAndTextPanels_15: 5210237398481275587
+      decorationsAndTextPanels_16: 1305102389299323431
+      decorationsAndTextPanels_17: 8792757948900744721
+      decorationsAndTextPanels_18: -907460558679893860
+      decorationsAndTextPanels_19: -113420096408333927
+      decorationsAndTextPanels_2: -7631305522738156988
+      decorationsAndTextPanels_3: 4878526421682602063
+      decorationsAndTextPanels_4: 3517375175464822543
+      decorationsAndTextPanels_5: 2752206969940590981
+      decorationsAndTextPanels_6: 3472570642195085168
+      decorationsAndTextPanels_7: -7312178015271160536
+      decorationsAndTextPanels_8: 3737857150062652731
+      decorationsAndTextPanels_9: -886448270762076241
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

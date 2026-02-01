@@ -30,7 +30,10 @@ public class PlayerMovementExperimental : MonoBehaviour
     private Vector3 dashDir;
     private bool bufferCam = false;
     private float camBufferTime;
-    float lastDir = 1f; // 1 = right, -1 = left
+    private bool inCutscene = false;
+    private float cutsceneStart;
+    private GameObject cutScene;
+    public float lastDir = 1f; // 1 = right, -1 = left
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,12 +46,24 @@ public class PlayerMovementExperimental : MonoBehaviour
         lastDash = Time.fixedTime;
         dashSpeed = dashLen / dashDuration;
         camBufferTime = Time.fixedTime;
-        
-    }
+        cutsceneStart = Time.fixedTime;
 
-    // Update is called once per frame
-    void Update()
+
+}
+
+// Update is called once per frame
+void Update()
     {      
+        if(inCutscene)
+        {
+            if (Time.fixedTime - cutsceneStart < 4.5f)
+            {
+                rbody.linearVelocity = new Vector2(0f, 0f);
+                return;
+            }
+            else
+                cutScene.SetActive(false);
+        }
         bool groundedNow = CheckGround(false); // !!!false so it doesn't buffer jumps
         Vector2 v = rbody.linearVelocity;      // if linearVelocity gives issues, use rbody.velocity
 
@@ -141,7 +156,7 @@ public class PlayerMovementExperimental : MonoBehaviour
             Warp();
         } */
 
-        if(Input.GetKeyDown(KeyCode.K) && dashEnabled && Time.fixedTime - lastDash > dashCD)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && dashEnabled && Time.fixedTime - lastDash > dashCD)
         {
             //Debug.Log("Dash started! time sice last dash: "+(Time.fixedTime - lastDash));
             //storedVelocity = rbody.linearVelocity;
@@ -258,5 +273,10 @@ public class PlayerMovementExperimental : MonoBehaviour
         dashEnabled = false;
     }
 
-    
+    public void StartCutscene(GameObject canvas)
+    {
+        inCutscene = true;
+        cutsceneStart = Time.fixedTime;
+        cutScene = canvas;
+    }
 }
