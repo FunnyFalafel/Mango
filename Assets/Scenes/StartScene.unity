@@ -439,7 +439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47.5, y: -2.33}
+  m_AnchoredPosition: {x: 48.9, y: -5}
   m_SizeDelta: {x: 5, y: 4.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &369867816
@@ -501,7 +501,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1962201580291615686, guid: 6c2832748a6821940bd1f68da705d977, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2102,8 +2102,7 @@ MonoBehaviour:
   transitionsContainer: {fileID: 551159510}
   character: {fileID: 7615621}
   moveSpeed: 5
-  moveDistance: 5
-  spriteFadeTime: 0.25
+  moveDistance: 15
 --- !u!114 &1567952729
 MonoBehaviour:
   m_ObjectHideFlags: 0
