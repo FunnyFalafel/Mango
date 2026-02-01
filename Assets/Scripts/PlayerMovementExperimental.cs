@@ -230,6 +230,7 @@ public class PlayerMovementExperimental : MonoBehaviour
     {
         Debug.Log("Changing checkpoint.");
         checkpoint = spot;
+        transform.position = spot;
     }
 
     public void Die()
@@ -239,15 +240,16 @@ public class PlayerMovementExperimental : MonoBehaviour
         else inFuture = false;
     }
 
-    public void AddShadow(Vector3 position)
+    public bool AddShadow(Vector3 position)
     {
         if(dashEnabled)
         {
             Debug.LogError("Trying to add shadow to a player that already has one.");
-            return;
+            return false;
         }
         shadowPos = position;
         dashEnabled = true;
+        return true;
     }
 
     public void RemoveShadow()

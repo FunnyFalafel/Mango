@@ -10,11 +10,13 @@ public class ShadowSpawner : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            col.gameObject.GetComponent<PlayerMovementExperimental>().AddShadow(shadowPos);
-            Instantiate(shadows, shadowPos, Quaternion.identity);
+            if (col.gameObject.GetComponent<PlayerMovementExperimental>().AddShadow(shadowPos)) 
+            { 
+                Instantiate(shadows, shadowPos, Quaternion.identity);
 
-            Destroy(otherSpawner);
-            Destroy(gameObject);
+                Destroy(otherSpawner);
+                Destroy(gameObject);
+            }
         }
     }
 }
