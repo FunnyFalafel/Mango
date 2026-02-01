@@ -89,12 +89,13 @@ public class PlayerMovementExperimental : MonoBehaviour
             Debug.Log("Buffered jump expired.");
         }
 
-        // replace this with function call from mouse tracking script?
+        // replaced with mouse tracking
+        /*
         if(Input.GetKeyDown(KeyCode.J) && Time.fixedTime - lastWarp > 0.4f)
         {
             Debug.Log("Attempting to warp.");
             Warp();
-        } 
+        } */
 
         if(Input.GetKeyDown(KeyCode.K) && dashEnabled && Time.fixedTime - lastDash > dashCD)
         {
@@ -160,7 +161,7 @@ public class PlayerMovementExperimental : MonoBehaviour
         //return false;
     }
 
-    void Warp()
+    public void Warp()
     {
         Debug.Log("Shifted worlds.");
         lastWarp = Time.fixedTime;
