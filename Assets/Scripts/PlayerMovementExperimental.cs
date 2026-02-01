@@ -111,7 +111,6 @@ public class PlayerMovementExperimental : MonoBehaviour
     }
 
 
-
     bool CheckGround(bool manual)
     {
         float bonusOffset = 0.05f;
