@@ -54,7 +54,8 @@ public class LevelManager : MonoBehaviour
                 yield return null;
             }
 
-            character.gameObject.SetActive("false");
+            character.gameObject.SetActive(false);
+
         }
 
         if (transition != null)
